@@ -10,11 +10,7 @@ namespace MATFYCHEM
         
         public void pocitej() {
            
-        Mocninator mocninator = new  Mocninator();
-        Menu menu = new  Menu();
-            string pokracovat;
-            do
-            {
+            
             Console.Clear();
             Console.WriteLine("Vítejte v kalkulačce");
 
@@ -50,12 +46,7 @@ namespace MATFYCHEM
     else
         Console.WriteLine("Neplatná volba");
     Console.ReadKey();
-    Console.WriteLine("Přejete si zadat další příklad? [ano/ne]");
-                 pokracovat = Console.ReadLine();
-                } while (pokracovat == "ano");
-
-            Console.WriteLine("Program bude automaticky pokračovat do hlavního menu");
-            menu.menu();
+    
             
             
 

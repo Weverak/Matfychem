@@ -10,10 +10,9 @@ namespace MATFYCHEM
 
 
         public void odmocni()
-        {
-            Kalkulacka kalkulacka = new Kalkulacka();
+        { 
 
-            Menu menu = new Menu();
+            
             Console.Clear();
             Console.WriteLine("Odmocniny");
             Console.WriteLine("Zadejte èíslo které chcete odmocnit?:");
@@ -23,10 +22,6 @@ namespace MATFYCHEM
             Console.Write("Výsledek je: " + vypocet);
 
             Console.ReadKey();
-
-            Console.WriteLine("Program automaticky pokraèuje do hlavního menu, pokud chcete program ukonèit zavøete okno s programem");
-            Console.ReadKey();
-            menu.menu();
 
         }
     }

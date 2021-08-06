@@ -8,6 +8,9 @@ namespace MATFYCHEM
     class Menu
     {
         public void menu() {
+
+            string pokracovat = "ano";
+            while(pokracovat == "ano") { 
             Kalkulacka kalkulacka = new  Kalkulacka();
         Mocninator mocninator = new  Mocninator();
             Odmocniny odmocniny = new Odmocniny();
@@ -18,19 +21,24 @@ namespace MATFYCHEM
             Console.WriteLine("1- kalkulačka");
             Console.WriteLine("2-Mocniny");
             Console.WriteLine("3-Odmocniny");
+                Console.WriteLine("4-Ukončit Program");
             int menu = int.Parse(Console.ReadLine());
-            switch(menu) {
-                case 1:
-                    kalkulacka.pocitej();
-                break;
+                switch (menu) {
+                    case 1:
+                        kalkulacka.pocitej();
+                        break;
 
-                case 2:
-                    mocninator.mocni();
-                break;
+                    case 2:
+                        mocninator.mocni();
+                        break;
 
-                case 3: 
-                    odmocniny.odmocni();
-                break; 
+                    case 3:
+                        odmocniny.odmocni();
+                        break;
+                    case 4:
+                        Environment.Exit(0);
+                        break;
+                }
             }
         }
     }
