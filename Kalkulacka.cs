@@ -7,53 +7,38 @@ namespace MATFYCHEM
 {
     class Kalkulacka
     {
+        public double vysledek;
         
-        public void pocitej() {
-           
-            
-            Console.Clear();
-            Console.WriteLine("Vítejte v kalkulačce");
-
-    Console.WriteLine("Zadejte první číslo:");
-    float a = float.Parse(Console.ReadLine());
-    Console.WriteLine("Zadejte druhé číslo:");
-    float b = float.Parse(Console.ReadLine());
-    Console.Clear();
-    Console.WriteLine("Zvolte si operaci:");
-    Console.WriteLine("1 - sčítání");
-    Console.WriteLine("2 - odčítání");
-    Console.WriteLine("3 - násobení");
-    Console.WriteLine("4 - dělení");
-    int volba = int.Parse(Console.ReadLine());
-    float vysledek = 0;
-    switch (volba)
-    {
-        case 1:
-            vysledek = a + b;
-            break;
-        case 2:
-            vysledek = a - b;
-            break;
-        case 3:
-            vysledek = a * b;
-            break;
-        case 4:
-            vysledek = a / b;
-            break;
-    }
-    if ((volba > 0) && (volba < 5))
-        Console.WriteLine("Výsledek: {0}", vysledek);
-    else
-        Console.WriteLine("Neplatná volba");
-    Console.ReadKey();
-    
-            
-            
-
-
-            
-
-            
+        
+        public double Scitej(double s1, double s2)
+        {
+            vysledek =  s1+ s2;
+            return vysledek;
+        }
+        public double Odcitej(double o1, double o2)
+        {
+           vysledek = o1 - o2;
+            return vysledek;
+        }
+        public double Nasob(double n1, double n2)
+        {
+            vysledek = n1 * n2;
+            return vysledek;
+        }
+        public double Del(double d1, double d2)
+        {
+             vysledek = d1 / d2;
+            return vysledek;
+        }
+        public double Mocni(double m1, double m2)
+        {
+             vysledek = Math.Pow(m1, m2);
+            return vysledek;
+        }
+        public double Odmocni(double od1)
+        {
+           vysledek = Math.Sqrt(od1);
+            return vysledek;
         }
     }
 }
